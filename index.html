@@ -43,4 +43,264 @@
         .nav-links {
             list-style: none;
             display: flex;
-            gap:
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        /* --- Hero Banner --- */
+        .hero {
+            background: linear-gradient(rgba(0, 100, 0, 0.8), rgba(0, 100, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1600&q=80'); 
+            /* Fallback color if image fails */
+            background-color: #004d00;
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero span {
+            color: #FFD700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+
+        .btn-hero {
+            background-color: #FFD700;
+            color: #004d00;
+            padding: 12px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn-hero:hover {
+            background-color: #e5c100;
+            transform: scale(1.05);
+        }
+
+        /* --- Match Highlights (Boilerplate Text Section) --- */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #006400;
+        }
+
+        .match-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .match-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-left: 5px solid #FFD700; /* Yellow accent border */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #006400;
+        }
+
+        .score {
+            background-color: #333;
+            color: #FFD700;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .match-summary {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* --- Signup Form Section --- */
+        .signup-section {
+            background-color: #006400;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .form-container {
+            background-color: white;
+            max-width: 500px;
+            margin: 30px auto 0;
+            padding: 30px;
+            border-radius: 10px;
+            color: #333;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #eee;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #FFD700;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #006400;
+            color: white;
+            border: none;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #004d00;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #222;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GreenPitch FC</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Matches</a></li>
+            <li><a href="#">Standings</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Pure <span>Football</span> Passion</h1>
+        <p>From the grassroots to the grand finals. Join the community that lives and breathes the beautiful game.</p>
+        <a href="#signup" class="btn-hero">Join the Squad</a>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Latest Match Reports</h2>
+        
+        <div class="match-grid">
+            <div class="match-card">
+                <div class="match-header">
+                    <span>Northside Rovers vs City United</span>
+                    <span class="score">2 - 2</span>
+                </div>
+                <p class="match-summary">
+                    A thrilling draw at the Riverside Stadium. Northside took an early lead with a stunning volley in the 12th minute, but City United clawed back with a penalty just before halftime. The second half saw end-to-end action, culminating in a 90th-minute equalizer that sent the away fans into a frenzy.
+                </p>
+            </div>
+
+            <div class="match-card">
+                <div class="match-header">
+                    <span>Green Athletic vs The Yellows</span>
+                    <span class="score">1 - 0</span>
+                </div>
+                <p class="match-summary">
+                    It was a defensive masterclass from Green Athletic today. Despite having only 35% possession, they managed to hold off a relentless attack from The Yellows. A classic counter-attack in the 75th minute proved to be the decisive moment, securing three crucial points for the home side.
+                </p>
+            </div>
+
+            <div class="match-card">
+                <div class="match-header">
+                    <span>Dynamo FC vs Spartak West</span>
+                    <span class="score">4 - 3</span>
+                </div>
+                <p class="match-summary">
+                    An absolute goal-fest under the floodlights! Dynamo FC looked comfortable with a 3-0 lead at the break, but complacency set in. Spartak West mounted an incredible comeback to level the score at 3-3, only for Dynamo's star striker to head home the winner in stoppage time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="signup" class="signup-section">
+        <h2>Ready to Play?</h2>
+        <p>Sign up for our weekly newsletter to get fixture updates and transfer news.</p>
+        
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn-submit">Sign Up Now</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 GreenPitch Football League. All rights reserved.
+    </footer>
+
+</body>
+</html>
